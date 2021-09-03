@@ -16,13 +16,13 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 
 //uri = uniform resource identifier
-const httpLink = createHttpLink({
-  uri: '/graphql',
-});
-
 // const httpLink = createHttpLink({
-//   uri: 'http://localhost:3001/graphql',
+//   uri: '/graphql',
 // });
+
+const httpLink = createHttpLink({
+  uri: 'http://localhost:3001/graphql',
+});
 
 const client = new ApolloClient({
   link: httpLink,
